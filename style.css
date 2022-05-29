@@ -1,1 +1,74 @@
 @import "normalize.css";
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#startScreen {
+    display: flex;
+    gap: 50px;
+}
+
+#startScreen .mode {
+    padding: 15px;
+    font-size: 30px;
+    font-weight: 700;
+    border: 3px solid #161616;
+    border-radius: 5px;
+}
+
+#startScreen .mode:hover {
+    background-color: rgb(195, 240, 199);
+}
+
+#addPlayer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#addPlayer label {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#gameboard {
+    display: grid;
+    grid: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+}
+
+#gameboard .tile {
+    width: 200px;
+    height: 200px;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gameboard .tile-win{
+    background-color: rgb(250, 211, 161);
+}
+
+#gameboard .tile:hover {
+    filter: brightness(95%);
+}
+
+#again-button {
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(128, 128, 128, 0.753);
+    padding: 50px 100px;
+    border-radius: 20px;
+    border: 2px solid black;
+    font-size: 25px;
+}
